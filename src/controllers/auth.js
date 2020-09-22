@@ -12,7 +12,7 @@ exports.authUser = async (req,res) => {
     if(!googleUser) return res.status(404).json({ok:false});
 
     // Verificar si existe en la base de datos
-    const user;
+    const user = null;
     const person = await Person.findOne({email: googleUser.email});
     if(!person) {
       // Registrar una nueva Persona

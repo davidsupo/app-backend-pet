@@ -20,8 +20,14 @@ router.post('/google/auth',[
 ], authUser)
 
 
-/*
-  Obtener un nuevo token
+/**
+ * @swagger
+ * /renew:
+ *  get:
+ *    description: Renovar el token, enviando uno válido
+ *    responses:
+ *      '200':
+ *        description: Respuesta satisfactoria, con un nuevo token
 */
 router.get('/renew', validateJWT);
 
