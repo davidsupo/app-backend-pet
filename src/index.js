@@ -11,6 +11,10 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
 
+
+// Mis rutas
+app.use('/api/login', require('./routes/auth'));
+
 connection()
 .then(()=>app.listen(PORT,()=>console.log(`running on ${PORT}`)))
 .catch(err=>console.log('Ocurrió un error inesperado: ',err))
